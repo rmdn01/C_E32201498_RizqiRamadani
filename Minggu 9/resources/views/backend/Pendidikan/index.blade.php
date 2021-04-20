@@ -20,8 +20,8 @@
 						Pendidikan
 					</header>
 				<div class="panel-body">
-					@if ($message = Session::get('succes'))
-					<div class="alert alert-succes">
+					@if ($message = Session::get('success'))
+					<div class="alert alert-success">
 						<p>{{ $message }}</p>
 					</div>
 					@endif

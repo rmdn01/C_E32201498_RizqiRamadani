@@ -54,4 +54,8 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('pendidikan', PendidikanController::class);
+Route::group(['middleware' => ['web','auth']], function () {
+	Route::resource('dashboard', DashboardController::class);
+	Route::resource('pendidikan', PendidikanController::class);
+});
+

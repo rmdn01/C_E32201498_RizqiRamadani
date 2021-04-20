@@ -21,6 +21,6 @@ class PendidikanController extends Controller
     	Pendidikan::create($request->all());
 
     	return redirect()->route('pendidikan.index')
-    					->with('succes','Data Pendidikan baru telah berhasil disimpan.');
+    					->with('success','Data Pendidikan baru telah berhasil disimpan.');
     }
 }
